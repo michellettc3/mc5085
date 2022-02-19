@@ -4,10 +4,18 @@ body{
 
 h1{
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Reenie Beanie', cursive;
-    color: #1DB954;
+    color: #cc1100;
 }
+
+h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Reenie Beanie', cursive;
+    color: #cc1100;
+}
+
 .mapdiv{
     width:90vw;
     margin: auto;
@@ -22,8 +30,27 @@ h1{
 .song {
     fill:1DB954;
 }
+
+
+.mapdiv path.linked {
+    fill: #79BD8F;
+}
+
+.mapdiv path.linked:hover {
+    fill: lightpink;
+}
+
 .mapdiv :hover{
     fill:lightpink;
     font-size: 30px;
 }
 
+footer{
+    font-family: 'Montserrat', sans-serif;
+    text-align:center;
+    font-size: 11px;
+    color: white;
+}
+path[name] {
+
+}
