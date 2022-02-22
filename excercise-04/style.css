@@ -1,0 +1,44 @@
+body{
+    background-color: #D2CCA1;
+    font-family: 'Montserrat', sans-serif;
+    margin: 50px 100px ;
+}
+
+h2{
+    color:#E83151;
+    font-size: 34px;
+}
+
+h4{
+    color:#E83151
+}
+
+p{
+    color:#387780;
+    font-size: 20px;
+}
+
+#container{
+    padding: 20px 40px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html,
+body{
+    
+}
+.container{
+    display:flex;
+    flex-direction: row;
+}
+
+.article{
+    width: 50%;
+    padding:30px;
+}
