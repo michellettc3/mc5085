@@ -1,0 +1,24 @@
+{
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "newApp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michellettc3/mc5085.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michellettc3/mc5085/issues"
+  },
+  "homepage": "https://github.com/michellettc3/mc5085#readme",
+  "dependencies": {
+    "@vue/cli": "^5.0.4",
+    "gsap": "^3.10.2",
+    "three": "^0.139.2"
+  }
+}
