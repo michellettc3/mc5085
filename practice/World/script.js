@@ -1,6 +1,3 @@
-import TweenMax from "/practice/node_modules/gsap/all.js";
-import Power3 from "/practice/node_modules/gsap/all.js";
-
 const cursor = document.getElementById("cursor");
 const amount = 20;
 const sineDots = Math.floor(amount * 0.3);
