@@ -7,9 +7,79 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+About
 <body>
-    
+    <div class="header">
+        <span class="wrap">
+            <h3>Michelle</h3>
+        </span>
+    </div>
 
-    <script type="module" src="script.js"></script>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+			  <defs>
+			    <filter id="goo">
+			      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+			      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo" />
+			      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+			    </filter>
+			  </defs>
+			</svg>
+
+    <div class="menu-tog">
+                <span></span>
+                <span></span>
+    </div>
+        
+    <div class="menu">
+        <div class="links">
+            <ul>
+                <li class="menu-wrap"><a href="/practice/index.html">Home/<span>01</span></a></li>
+                <li class="menu-wrap"><a href="/practice/World/index.html">Where/<span>02</span></a></li>
+                <li class="menu-wrap"><a href="/practice/About/index.html">About/<span>03</span></a></li>
+                <li class="menu-wrap"><a href="/practice/:)/index.html">:)/<span>04</span></a></li>
+            </ul>
+        </div>
+    </div>
+            
+<div class="page">
+	
+	<div class="page-bg">
+		<p></p>
+		<div class="noise"></div>
+	</div>
+	
+
+	<div class="container">
+		<div class="child">
+			<div class="content">
+				<div>
+				<div id="button" class="HoverButton">
+					<div class="bg"></div>
+					<h1></h1>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="stamp">
+		<div class="circle">
+			<p id="circle-content">MICHELLE   .  MICHELLE   .</p>
+		</div>
+		<p>:)</p>
+	</div>
+</div>
+
+<div id="cursor" class="Cursor">
+</div>
+
+<main>
+   <div class="shape"></div>
+</main>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js'></script>
+
+<script type="module" src="script.js"></script>
 </body>
 </html>

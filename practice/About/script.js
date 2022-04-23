@@ -1,3 +1,5 @@
+
+
 const cursor = document.getElementById("cursor");
 const amount = 20;
 const sineDots = Math.floor(amount * 0.3);
@@ -10,6 +12,8 @@ const menuTog = document.querySelector('.menu-tog');
 const menu = document.querySelector('.menu');
 const menuWraps = [...document.querySelectorAll('.menu-wrap')];
 
+const pageContainer = document.querySelector(".container");
+
 
 let lastFrame = 0;
 let mousePosition = {x: 0, y: 0};
@@ -18,6 +22,7 @@ let timeoutID;
 let idle = false;
 let hoverButton;
 let hoverTL;
+
 
 window.addEventListener('resize', init);
 menuTog.addEventListener('click', toggleMenu)
