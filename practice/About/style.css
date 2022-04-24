@@ -25,44 +25,6 @@
   }
   
 
-
-  section:not(#sectionPin) {
-    min-height: 100vh;
-    width: 100%;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2rem;
-    padding: 50px 10vw;
-    margin: auto;
-    place-items: center;
-  }
-  img {
-    height: 80vh;
-    width: auto;
-    object-fit: cover;
-    padding: 0 5vw;
-  }
-  #sectionPin {
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    left: 0;
-    background: var(--text-color);
-    color: var(--bg-color);
-  }
-  .pin-wrap {
-    height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 50px 10vw;
-  }
-
-
-
-
-
   .menu-tog {
     position: fixed;
     top: 3%;
@@ -73,7 +35,7 @@
     flex-direction: column;
     cursor: pointer;
     justify-content: space-between;
-    z-index: 3000;
+    z-index: 100;
     mix-blend-mode: difference;
   }
   
@@ -212,8 +174,8 @@
     line-height: 100vh;
   }
   .container {
-    width: 100%;
-    height: 10%;
+    width: 90%;
+    height: 100%;
     display: table;
     z-index: 100;
   }
@@ -225,6 +187,8 @@
     vertical-align: middle;
     text-align: center;
   }
+  
+
   .HoverButton {
     position: relative;
     display: inline-block;
@@ -278,16 +242,24 @@
 
   main {
     position: fixed;
-    top: 10%;
-    bottom: 10%;
+    top: 18%;
+    bottom: 2%;
     left: 0%;
     right: 0%;
-    width: 110%;
-    height: 70vh;
+    width: 100%;
+    height: 100%;
     z-index: 11;
     padding: 10%;
     overflow: scroll; 
     overflow-x: hidden;
+  }
+  img {
+    height: 80vh;
+    width: auto;
+    left:2%;
+    object-fit: cover;
+    padding: 5vw 5vw;
+    z-index:1;
   }
 
   .Cursor {
@@ -316,7 +288,7 @@
     position: absolute;
     right: 6vmax;
     bottom: 6vmax;
-    z-index: 10;
+    z-index: 100;
   }
   .stamp p {
     color: #ee3d3d;
@@ -452,41 +424,8 @@
 
 
   @media only screen and (max-width: 768px) {
-    .img-left {
-      position: relative;
-      top: 5%;
-      left: 0%;
-      width: 100vw;
-      height: 90%;
-      object-fit: cover;
-    }
-    .proj-info-left {
-      display: none;
-    }
-
-    .img-right {
-      position: absolute;
-      top: 5%;
-      right: 0%;
-      width: 100vw;
-      height: 90%;
-      object-fit: cover;
-    }
-    .proj-info-right {
-      display: none;
-    }
-
-    .img-3 {
-      position: absolute;
-      top: 5%;
-      right: 0%;
-      width: 100vw;
-      height: 90%;
-      object-fit: cover;
-    }
-    .proj-info-3 {
-      display: none;
-    }
+   
+    
 
 
     .menu-tog {
@@ -512,7 +451,7 @@
       width: 100%;
       height: 100vh;
       background-color: var(--main-bg-color);
-      z-index: 3000;
+      z-index: 30;
       opacity: 0;
       pointer-events: none;
       transition: 0.5s;
@@ -527,16 +466,26 @@
 
     main {
       position: fixed;
-      top: 10%;
+      top: 18%;
       bottom: 0%;
-      left: 0%;
-      right: 0%;
-      width: 110%;
-      height: 100%;
+      left: 5%;
+      right: 5%;
+      width: 100vw;
+      height: 100vh;
       z-index: 11;
       padding: 0%;
       overflow: scroll; 
-      overflow-x: hidden;
     }
   }
   
+  img {
+    height: 60vh;
+    width: auto;
+    left:2%;
+    right:2%;
+    object-fit: cover;
+    padding: 5vw 5vw;
+    z-index:1;
+  }
+
+ 
