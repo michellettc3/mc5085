@@ -11,15 +11,6 @@
 </head>
 <body>
 
-    <div class="preloader">
-        <span>h</span>
-        <span>e</span>
-        <span>l</span>
-        <span>l</span>
-        <span>o</span>
-        <span>o</span>
-         <span>o</span>
-    </div>
 
     
     <div class="menu-tog">
@@ -559,16 +550,19 @@
     </main>
     
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js'></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="script.js"></script>
 
     <script>
-        var loader = document.getElementsByClassName("preloader");
-        window.addEventListener("load", function(){
-            const preload = document.querySelector('.preload');
-            setTimeout(function(){
-                preload.fadeout();
-            }, 1000);
-            })
+        $(document).ready(function(){   
+            window.setTimeout('fadeout();', 30000);
+        });
+
+        function fadeout(){
+            $('#loader').delay(50000).fadeOut('slow', function() {
+                $('.notLoaded').removeClass('notLoaded');
+            });
+        }
         
    
     </script>

@@ -15,6 +15,7 @@ let lastFrame = 0;
 let mousePosition = {x: 0, y: 0};
 let dots = [];
 let timeoutID;
+let idle = false;
 let hoverButton;
 let hoverTL;
 

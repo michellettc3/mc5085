@@ -23,6 +23,21 @@ let idle = false;
 let hoverButton;
 let hoverTL;
 
+let shape = document.querySelector('.shape');
+
+let angle = 0;
+let scale = 0;
+
+document.addEventListener('wheel', (e) => {
+  angle += e.deltaY * 0.5;
+  // scale += Math.sin(e.deltaY) ;
+  rotate()
+});
+
+function rotate(){
+  shape.style.transform = `rotate(${angle}deg)`;
+  requestAnimationFrame(rotate);
+}
 
 window.addEventListener('resize', init);
 menuTog.addEventListener('click', toggleMenu)
@@ -268,48 +283,5 @@ const positionCursor = delta => {
     });
 };
 
-gsap.set('.stage',  {perspective:800})
-gsap.set('.txt',    {left:'50%', top:'50%', xPercent:-50, yPercent:-50, whiteSpace:'nowrap'})
-
-let chars = new SplitText('.txt', {type:'chars', position:'absolute'}).chars;
-
-// 3d rotation
-gsap.timeline() 
-    .set(chars,     {x:0, left:'50%', transformPerspective:800, transformOrigin:'0 0 -500'})
-    .fromTo(chars,  {rotationY:(i)=>i/chars.length*360}, {rotationY:'-=360', duration:12, ease:'none', repeat:-1}, 0)
-    .fromTo(chars,  {rotationX:-9}, {rotationX:12, duration:6, ease:'power3.inOut', yoyo:true, repeat:-1}, 0)
-    .fromTo('.txt', {rotation:20}, {rotation:-10, duration:10, ease:'power2.inOut', yoyo:true, repeat:-1}, 0)
-
-// lighting
-for (let i=0; i<chars.length; i++){ 
-  gsap.timeline({repeat:-1})
-      // .fromTo(chars[i], {zIndex:1000, color:'#fff'}, {zIndex:1, color:'#000', duration:8, repeat:1, yoyo:true, ease:'power1'}, 0) //simple grayscale (alternative to lines 17-21)
-      .fromTo(chars[i], {zIndex:1000, color:'#fff'}, {zIndex:1, color:'#244353', duration:3, ease:'power1'}, 0)
-      .to(chars[i],     {color:'#000', duration:4, ease:'expo'})
-      .to(chars[i],     {color:'#244353', duration:4, ease:'power3.in'})  
-      .to(chars[i],     {color:'#a48d7d', duration:2, ease:'none'})
-      .to(chars[i],     {zIndex:1000, color:'#fff', duration:3, ease:'power3.inOut'})
-      .progress(1-i/chars.length)
-}
-
-// film grain + dust
-gsap.set('.grain', {width:'100%', height:'100%', backgroundImage:'url(https://assets.codepen.io/721952/grain.png)', mixBlendMode:'overlay'})
-
-for (let i=0; i<8; i++){
-  let d = document.createElement('div');
-  document.getElementsByClassName('stage')[0].appendChild(d);
-  gsap.set(d, {attr:{class:'d'}, width:30, height:30, backgroundImage:'url(https://assets.codepen.io/721952/filmDust.png)', backgroundPosition:'0 -'+gsap.utils.wrap(0,8,i)*30+'px'});
-}
-
-function dustLoop(){
-  gsap.timeline({onComplete:dustLoop})
-      .set('.d', {x:()=>window.innerWidth*1.5*Math.random(), // overshoot width+height of stage to reduce number visible at once
-                  y:()=>window.innerHeight*2*Math.random(),  //
-                  rotation:()=>360*Math.random(),
-                  scale:()=>Math.random(),
-                  opacity:()=>Math.random()
-                 }, 0.07)
-}
-dustLoop()
-
 init();
+
