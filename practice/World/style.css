@@ -430,6 +430,17 @@ main {
     mix-blend-mode: difference;
   }
   
+  .menu-tog span {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: auto;
+    transition: 0.5s;
+    transform-origin: center;
+  }
 
   .menu {
     position: fixed;
